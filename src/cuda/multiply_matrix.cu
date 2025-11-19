@@ -17,7 +17,6 @@ __global__ void mul2d(int **A, int **B, int **C, int len) {
         sum += A[i][k] * B[k][j];
     }
     C[j][i] = sum;
-    cudaDeviceSynchronize();
 }
 
 int **generate_matrix(int len, bool generateRandomData) {
